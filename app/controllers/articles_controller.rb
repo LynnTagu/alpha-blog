@@ -12,13 +12,12 @@ class ArticlesController < ApplicationController
     @article = Article.new
     
   end 
-  
   def edit
    
   end 
   
   def create
-    debugger 
+   # debugger 
     @article = Article.new(article_params)
     @article.user = current_user 
     if @article.save
